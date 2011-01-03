@@ -64,6 +64,10 @@ public class Ordering implements Serializable {
         this.clientName = clientName;
     }
 
+    public HashMap<Item, Integer> getProducts() {
+        return products;
+    }
+
     public Integer addProduct(Item product, Integer quantity) {
         if (this.products.containsKey(product)) {
             quantity += this.products.get(product);
